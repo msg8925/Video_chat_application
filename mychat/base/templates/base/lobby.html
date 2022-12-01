@@ -8,7 +8,7 @@
     <section id="form-container">
         <img id="logo" src="{% static 'images/chat-icon.png' %}" alt="chat-icon">
 
-        <div id="welocome-message">
+        <div id="welcome-message">
             <h1>Welcome to MyChat</h1>
         </div>
         <p>A group video calling application just for you!</p>
@@ -39,6 +39,7 @@
         e.preventDefault()
 
         let room = e.target.room.value.toUpperCase()
+        let name = e.target.username.value
 
         let response = await fetch(`/get_token/?channel=${room}`)
         let data = await response.json()
@@ -49,6 +50,7 @@
         sessionStorage.setItem('UID', UID)
         sessionStorage.setItem('token', token)
         sessionStorage.setItem('room', room)
+        sessionStorage.setItem('name', name)
 
         window.open('/room/', '_self')
     }
