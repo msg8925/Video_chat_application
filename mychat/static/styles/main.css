@@ -50,3 +50,30 @@ body {
     height: 100%;
     width: 100%;
 }
+
+
+/* ------------------------------ Room Styling | controls ------------------------- */
+
+#controls-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 1em;
+    position: fixed;
+    bottom: 20px;
+    z-index: 10;
+}
+
+.control-icon{
+    height: 20px;
+    width: 20px;
+    box-shadow: var(--shadow);
+    background-color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px; 
+}
+
+#leave-btn{
+    background-color: rgba(255, 80, 80, 1);
+}
