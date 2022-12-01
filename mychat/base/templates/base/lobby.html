@@ -8,7 +8,7 @@
     <section id="form-container">
         <img id="logo" src="{% static 'images/chat-icon.png' %}" alt="chat-icon">
 
-        <div>
+        <div id="welocome-message">
             <h1>Welcome to MyChat</h1>
         </div>
         <p>A group video calling application just for you!</p>
@@ -18,7 +18,11 @@
 
             <div class="form-field">
                 <input type="text" name="room" placeholder="Enter a room name..." style="text-transform:uppercase;">
-            </div>    
+            </div>
+            
+            <div class="form-field">
+                <input type="text" name="username" placeholder="Enter your name..." style="text-transform:uppercase;">
+            </div>   
 
             <div class="form-field">
                 <input type="submit" value="Join Stream">
