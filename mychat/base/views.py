@@ -6,6 +6,7 @@ import time
 import json
 from .models import RoomMember
 from django.views.decorators.csrf import csrf_exempt
+import os
 
 def getToken(request):
 
